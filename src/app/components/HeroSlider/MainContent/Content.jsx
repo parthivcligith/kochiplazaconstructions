@@ -121,6 +121,27 @@ export default function NextImageSlider({
         <p className={styles.description}>
           {content[newCurrentIndex].shortDescription}
         </p>
+        <button className={styles.walkthroughButton} onClick={() => {
+          const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+          const duration = 15000; // 15 seconds to scroll down
+          const startTime = performance.now();
+
+          function scrollDown(currentTime) {
+            const elapsed = currentTime - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            // Ease in-out
+            const ease = progress < 0.5 ? 2 * progress * progress : 1 - Math.pow(-2 * progress + 2, 2) / 2;
+
+            window.scrollTo(0, ease * totalHeight);
+
+            if (progress < 1) {
+              requestAnimationFrame(scrollDown);
+            }
+          }
+          requestAnimationFrame(scrollDown);
+        }}>
+          See Walkthrough
+        </button>
       </div>
     </div>
   );

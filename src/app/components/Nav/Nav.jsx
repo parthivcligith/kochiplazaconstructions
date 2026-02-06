@@ -34,6 +34,12 @@ export default function Nav() {
           <TextHover text="( Our Services )" />
         </h4>
 
+        {/* Hamburger Icon for Mobile */}
+        <div className={styles.hamburger} onClick={() => toggleMenu()}>
+          <span></span>
+          <span></span>
+        </div>
+
         <div className={styles.logo}>
           <img src="/assets/images/logo.png" alt="KochiPlaza Logo" className={styles.logoImage} />
         </div>

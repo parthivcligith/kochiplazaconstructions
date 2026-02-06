@@ -13,6 +13,7 @@ import { useEffect, useState } from "react";
 import Lenis from "@studio-freight/lenis";
 import Footer from "./components/Footer/Footer";
 import TextHover from "./components/TextHover/TextHover";
+import Marquee from "./components/Marquee/Marquee";
 
 export default function Home() {
   // useEffect(() => {
@@ -27,6 +28,7 @@ export default function Home() {
     <main className={styles.main}>
       <Nav />
       <HeroSlider />
+      <Marquee />
       <Description />
       <ChipScroll />
       <Content />

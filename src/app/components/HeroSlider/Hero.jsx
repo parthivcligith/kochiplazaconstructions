@@ -8,7 +8,7 @@ import Image from "next/image";
 import TextHover from "../TextHover/TextHover";
 
 export default function Hero() {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(1);
   const [isAnimated, setIsAnimated] = useState(false);
   const [isNext, setIsNext] = useState(false);
   const [isPrev, setIsPrev] = useState(false);

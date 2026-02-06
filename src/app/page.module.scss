@@ -2,6 +2,17 @@
 
 //
 
+.main {
+  width: 100%;
+  // max-width: 100vw; 
+  // removed overflow-x to fix sticky scroll animations
+  box-sizing: border-box;
+
+  * {
+    box-sizing: border-box;
+  }
+}
+
 .customP {
   color: red;
   font-size: 12px;

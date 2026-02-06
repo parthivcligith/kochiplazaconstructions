@@ -1,0 +1,81 @@
+.floatingLogo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 50px;
+    width: auto;
+    max-width: 85vw;
+    min-width: 700px;
+    margin: 0 auto 40px auto; // Center horizontally and add bottom space
+    z-index: 5;
+    position: relative;
+
+    // Island effect with rounded edges and glassmorphism (matching Nav)
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 60px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.15);
+
+    .menuOpener,
+    .contactLink {
+        z-index: 12;
+        font-size: 18px;
+        margin: 0;
+        white-space: nowrap;
+        flex-shrink: 0;
+        color: #333; // Default text color
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .logoImage {
+            height: 40px;
+            width: auto;
+            object-fit: contain;
+            display: block;
+        }
+    }
+}
+
+// Responsive design
+@media (max-width: 900px) {
+    .floatingLogo {
+        min-width: auto;
+        width: 88vw;
+        padding: 15px 30px;
+
+        .menuOpener,
+        .contactLink {
+            font-size: 16px;
+        }
+
+        .logo .logoImage {
+            height: 32px;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .floatingLogo {
+        padding: 12px 20px;
+        justify-content: center;
+
+        .menuOpener,
+        .contactLink {
+            display: none;
+        }
+
+        .logo .logoImage {
+            height: 28px;
+        }
+    }
+}

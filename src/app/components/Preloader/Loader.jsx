@@ -10,9 +10,9 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 const images = [
   "/assets/images/blobism.jpg",
   "/assets/images/brutalism.jpg",
-  "/assets/images/high-tech.jpg",
-  "/assets/images/metabolism.jpg",
-  "/assets/images/modernist.jpg",
+  "/assets/images/high-tech.jpeg",
+  "/assets/images/o2n.jpg",
+  "/assets/images/int.png",
 ];
 
 export default function Loader() {
@@ -180,7 +180,7 @@ export default function Loader() {
 
   return (
     <div className={styles.loader} ref={container}>
-      <h1 ref={h1} style={{ transformStyle: "preserve-3d" }}></h1>
+      <h1 ref={h1} style={{ transformStyle: "preserve-3d", textAlign: "center", margin: "0 auto" }}></h1>
       <div className={styles.imageContainer} ref={imageContainer}>
         {images.map((image, index) => (
           <Image

@@ -138,14 +138,17 @@ export default function ChipScroll() {
     const text1Opacity = useTransform(scrollYProgress, [0, 0.1, 0.2], [0, 1, 0]);
     const text1Y = useTransform(scrollYProgress, [0, 0.1, 0.2], [20, 0, -20]);
 
-    const text2Opacity = useTransform(scrollYProgress, [0.2, 0.35, 0.5], [0, 1, 0]);
-    const text2Y = useTransform(scrollYProgress, [0.2, 0.35, 0.5], [20, 0, -20]);
+    const text2Opacity = useTransform(scrollYProgress, [0.2, 0.3, 0.4], [0, 1, 0]);
+    const text2Y = useTransform(scrollYProgress, [0.2, 0.3, 0.4], [20, 0, -20]);
 
-    const text3Opacity = useTransform(scrollYProgress, [0.5, 0.65, 0.8], [0, 1, 0]);
-    const text3Y = useTransform(scrollYProgress, [0.5, 0.65, 0.8], [20, 0, -20]);
+    const text3Opacity = useTransform(scrollYProgress, [0.4, 0.5, 0.6], [0, 1, 0]);
+    const text3Y = useTransform(scrollYProgress, [0.4, 0.5, 0.6], [20, 0, -20]);
 
-    const text4Opacity = useTransform(scrollYProgress, [0.8, 0.9, 1], [0, 1, 1]); // Stays visible at end? No, let's keep it clean.
-    const text4Y = useTransform(scrollYProgress, [0.8, 0.9, 1], [20, 0, 0]);
+    const text4Opacity = useTransform(scrollYProgress, [0.6, 0.7, 0.8], [0, 1, 0]);
+    const text4Y = useTransform(scrollYProgress, [0.6, 0.7, 0.8], [20, 0, -20]);
+
+    const text5Opacity = useTransform(scrollYProgress, [0.8, 0.9, 1], [0, 1, 1]);
+    const text5Y = useTransform(scrollYProgress, [0.8, 0.9, 1], [20, 0, 0]);
 
 
     return (
@@ -177,6 +180,12 @@ export default function ChipScroll() {
 
                     {/* Text 4 */}
                     <motion.div style={{ opacity: text4Opacity, y: text4Y }} className={styles.textWrapper}>
+                        <h2 className={styles.heading}>Sustainable <br />Living.</h2>
+                        <p className={styles.subheading}>Incorporating eco-friendly materials and energy-efficient designs for a greener future.</p>
+                    </motion.div>
+
+                    {/* Text 5 */}
+                    <motion.div style={{ opacity: text5Opacity, y: text5Y }} className={styles.textWrapper}>
                         <h2 className={styles.heading}>Build Your <br />Vision.</h2>
                         <p className={styles.subheading}>The trusted construction partner for the next generation of spaces.</p>
                         <button className={styles.button}>Explore Our Projects</button>

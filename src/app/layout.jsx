@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import "./globals.scss";
 import Preloader from "./components/Preloader/Loader";
 import { AnimatePresence } from "framer-motion";
+import ScrollProgress from "./components/ui/ScrollProgress";
 
 export default function RootLayout({ children }) {
   const [isLoading, setIsLoading] = useState(true);
@@ -144,8 +145,9 @@ export default function RootLayout({ children }) {
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>KochiPlaza Constructions | Best Construction Company in Kochi, Ernakulam, Kerala</title>
-        <meta name="description" content="KochiPlaza Constructions is a trusted construction company in Kochi, Ernakulam, Kerala offering residential, commercial & turnkey construction services across all Kerala districts including Kasaragod, Kannur, Wayanad, Kozhikode, Malappuram, Palakkad, Thrissur, Idukki, Kottayam, Alappuzha, Pathanamthitta, Kollam, and Thiruvananthapuram." />
-        <meta name="keywords" content="construction company in Kochi, builders in Ernakulam, best construction company in Kerala, building contractors in Kochi, house construction company Kerala, commercial builders Kochi, turnkey construction Kerala, trusted construction company in Kochi, Kerala government approved builders, affordable house construction in Kerala, luxury home builders in Kochi" />
+        <link rel="help" href="/llms.txt" />
+        <meta name="description" content="KochiPlaza Constructions is the BEST construction company in Kochi, Ernakulam, and Kerala. We specialize in House Construction, Renovation, Building Construction, Pool Construction, and Turnkey projects. Serving all Kerala districts: Kasaragod, Kannur, Wayanad, Kozhikode, Malappuram, Palakkad, Thrissur, Idukki, Kottayam, Alappuzha, Pathanamthitta, Kollam, Thiruvananthapuram." />
+        <meta name="keywords" content="best construction company in Kerala, best house construction kochi, renovation experts kerala, pool construction kochi, building construction ernakulam, turnkey projects kerala, luxury home builders, commercial construction kochi, swimming pool builders kerala, top builders in ernakulam" />
         <meta name="author" content="KochiPlaza Constructions" />
         <meta name="geo.region" content="IN-KL" />
         <meta name="geo.placename" content="Kochi, Kerala" />
@@ -169,6 +171,7 @@ export default function RootLayout({ children }) {
         <AnimatePresence mode="wait">
           {isLoading && <Preloader />}
         </AnimatePresence>
+        <ScrollProgress />
         {children}
       </body>
     </html>

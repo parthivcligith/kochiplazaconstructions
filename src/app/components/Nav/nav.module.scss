@@ -61,6 +61,10 @@
     }
   }
 
+  .hamburger {
+    display: none; // Hidden by default on large screens
+  }
+
   &.open {
     width: 95vw;
     max-width: 95vw;
@@ -121,21 +125,39 @@
   .islandNav {
     padding: 12px 20px;
     top: 15px;
-    justify-content: center;
-    /* Center the single logo item */
+    justify-content: space-between; // Changed from center to space-between
 
     .menuOpener {
       display: none;
     }
 
+    // Show Hamburger 
+    .hamburger {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 6px;
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+
+      span {
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: #333; // Dark color for visibility
+        border-radius: 2px;
+        transition: all 0.3s ease;
+      }
+    }
+
     .logo {
       position: relative;
-      /* Remove absolute positioning on mobile since it's the only item */
       transform: none;
       left: auto;
 
       .logoImage {
-        height: 28px;
+        height: 24px; // Slightly smaller to fit with hamburger
       }
     }
 

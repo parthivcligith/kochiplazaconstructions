@@ -53,17 +53,17 @@ export default function Description() {
         <div className={styles.illustrations}>
           <div className={styles.images}>
             <div className={styles.imageContainer}>
-              <img src="/assets/images/blobism.jpg" alt="Residential construction project in Kochi by KochiPlaza Constructions" title="House Construction in Kerala" />
+              <img src="/assets/images/house3.png" alt="Residential construction project in Kochi by KochiPlaza Constructions" title="House Construction in Kerala" />
             </div>
             <div className={styles.imageContainer}>
-              <img src="/assets/images/metabolism.jpg" alt="Renovation services in Ernakulam by KochiPlaza Constructions" title="Renovation Services Kerala" />
+              <img src="/assets/images/building1.png" alt="Renovation services in Ernakulam by KochiPlaza Constructions" title="Renovation Services Kerala" />
             </div>
             <div className={styles.imageContainer}>
-              <img src="/assets/images/modernist.jpg" alt="Interior design project in Kochi by KochiPlaza Constructions" title="Interior Design Services Kerala" />
+              <img src="/assets/images/plan1.png" alt="Interior design project in Kochi by KochiPlaza Constructions" title="Interior Design Services Kerala" />
             </div>
           </div>
           {/* <div ref={imageFull} className={styles.imageFullContainer}>
-            <img src="/assets/images/high-tech.jpg" alt="illustration-3" />
+            <img src="/assets/images/high-tech.jpeg" alt="illustration-3" />
           </div> */}
         </div>
       </div>

@@ -8,8 +8,8 @@
 }
 
 .currentImageSlider {
-  width: 20vw;
-  height: 40vh;
+  width: 28vw; // Vertically long rectangle for desktop
+  height: 65vh;
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -17,6 +17,7 @@
 
   @media screen and (max-width: 1000px) {
     width: 60vw;
+    height: 40vh; // Keep mobile height unchanged
   }
 }
 
@@ -79,5 +80,26 @@
     @media screen and (max-width: 440px) {
       font-size: 16px;
     }
+  }
+}
+
+.walkthroughButton {
+  margin-top: 20px;
+  padding: 12px 24px;
+  background-color: transparent;
+  border: 1px solid #333;
+  border-radius: 30px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  opacity: 0.7;
+
+  &:hover {
+    background-color: #333;
+    color: white;
+    opacity: 1;
   }
 }

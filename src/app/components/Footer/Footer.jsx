@@ -50,26 +50,42 @@ export default function Footer() {
           })}
         </div>
         <div className={styles.presentation}>
-          <h2>KochiPlaza Constructions</h2>
-          <h3>Trusted Construction Company in Kochi & Kerala</h3>
+
+
+          <div className={styles.titleContainer}>
+            <h2>KochiPlaza Constructions</h2>
+            <h3>Trusted Construction Company in Kochi & Kerala</h3>
+          </div>
 
           <div className={styles.contactInfo}>
-            <h4>Primary Office:</h4>
-            <p>4756+4P5 Constructions, NH66, Kavilnada, Koonammavu</p>
-            <p>Kochi, Kerala 683518</p>
+            <div className={styles.infoBlock}>
+              <h4>Primary Office</h4>
+              <p>4756+4P5 Constructions, NH66,<br />Kavilnada, Koonammavu<br />Kochi, Kerala 683518</p>
+            </div>
 
-            <h4>Branch Office:</h4>
-            <p>Near Zudio, Vallathol Padi, Vidhya Nagar Colony</p>
-            <p>Thrikkakara, Edappilly, Kochi, Kerala 682037</p>
+            <div className={styles.infoBlock}>
+              <h4>Branch Office</h4>
+              <p>Near Zudio, Vallathol Padi,<br />Vidhya Nagar Colony<br />Thrikkakara, Edappilly<br />Kochi, Kerala 682037</p>
+            </div>
 
-            <h4>Contact:</h4>
-            <p><a href="tel:+919895169005" style={{ color: 'inherit', textDecoration: 'none' }}>📞 98951 69005</a></p>
+            <div className={styles.infoBlock}>
+              <h4>Contact</h4>
+              <p><a href="tel:+919895169005">📞 +91 98951 69005</a></p>
+              <p><a href="mailto:info@kochiplaza.com">✉️ info@kochiplaza.com</a></p>
+            </div>
 
-            <h4>Business Hours:</h4>
-            <p>Monday - Saturday: 9:00 AM - 5:30 PM</p>
+            <div className={styles.infoBlock}>
+              <h4>Business Hours</h4>
+              <p>Mon - Sat: 9:00 AM - 5:30 PM</p>
+              <p className={styles.subtext}>Sunday: Closed</p>
+            </div>
 
-            <h4>Serving All Kerala Districts:</h4>
-            <p>Kasaragod, Kannur, Wayanad, Kozhikode, Malappuram, Palakkad, Thrissur, Ernakulam, Idukki, Kottayam, Alappuzha, Pathanamthitta, Kollam, Thiruvananthapuram</p>
+            <div className={`${styles.infoBlock} ${styles.fullWidth}`}>
+              <h4>Serving All Kerala Districts</h4>
+              <p className={styles.districts}>
+                Kasaragod • Kannur • Wayanad • Kozhikode • Malappuram • Palakkad • Thrissur • Ernakulam • Idukki • Kottayam • Alappuzha • Pathanamthitta • Kollam • Thiruvananthapuram
+              </p>
+            </div>
           </div>
 
           <div className={styles.socials}>
@@ -84,6 +100,11 @@ export default function Footer() {
               {" "}
               <TextHover text="Call Us" />
             </a>
+            <button className={styles.backToTopButton} onClick={() => {
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }}>
+              <TextHover text="Back to Top" />
+            </button>
           </div>
         </div>
       </div>
