@@ -1,0 +1,146 @@
+.islandNav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 50px;
+  position: fixed;
+  top: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: auto;
+  max-width: 85vw;
+  min-width: 700px;
+  z-index: 12;
+
+  // Island effect with rounded edges and glassmorphism
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 60px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.15);
+
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+  .menuOpener {
+    z-index: 12;
+    font-size: 18px;
+    margin: 0;
+    white-space: nowrap;
+    flex-shrink: 0;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 11;
+
+    .logoImage {
+      height: 40px;
+      width: auto;
+      object-fit: contain;
+      display: block;
+      transition: all 0.3s ease;
+    }
+  }
+
+  .contactLink {
+    z-index: 12;
+    font-size: 18px;
+    margin: 0;
+    white-space: nowrap;
+    flex-shrink: 0;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &.open {
+    width: 95vw;
+    max-width: 95vw;
+    background: rgba(0, 0, 0, 0.95);
+    border-color: rgba(255, 255, 255, 0.1);
+
+    .menuOpener {
+      z-index: 13;
+      color: white;
+    }
+
+    .logo {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .contactLink {
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
+}
+
+.close {
+  position: fixed;
+  top: 45px;
+  right: 60px;
+  color: white;
+  z-index: 13;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+// Responsive design
+@media (max-width: 900px) {
+  .islandNav {
+    min-width: auto;
+    width: 88vw;
+    padding: 15px 30px;
+
+    .menuOpener {
+      font-size: 16px;
+    }
+
+    .logo .logoImage {
+      height: 32px;
+    }
+
+    .contactLink {
+      font-size: 16px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .islandNav {
+    padding: 12px 20px;
+    top: 15px;
+    justify-content: center;
+    /* Center the single logo item */
+
+    .menuOpener {
+      display: none;
+    }
+
+    .logo {
+      position: relative;
+      /* Remove absolute positioning on mobile since it's the only item */
+      transform: none;
+      left: auto;
+
+      .logoImage {
+        height: 28px;
+      }
+    }
+
+    .contactLink {
+      display: none;
+    }
+  }
+}

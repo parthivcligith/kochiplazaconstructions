@@ -1,0 +1,39 @@
+.sliderContainer {
+  position: relative;
+}
+
+.nextImageSlider {
+  width: 50vw;
+  height: 100vh;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+}
+
+.nextImageContainer {
+  position: absolute;
+
+  width: 100%;
+  height: 100vh;
+  opacity: 0;
+  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  &.current {
+    opacity: 1;
+
+    object-fit: cover;
+  }
+
+  &.next {
+    object-fit: cover;
+  }
+
+  &.prev {
+    object-fit: cover;
+  }
+
+  .nextImage {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+  }
+}

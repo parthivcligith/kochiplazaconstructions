@@ -1,0 +1,72 @@
+@import "../../variables.scss";
+
+.heroSlider {
+  display: flex;
+  // overflow-x: hidden;
+}
+
+.currentContent {
+  height: 100vh;
+  // padding: 0 60px;
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+
+  @media screen and (max-width: 1000px) {
+    width: 100vw;
+  }
+}
+
+.nextContent {
+  @media screen and (max-width: 1000px) {
+    display: none;
+  }
+}
+
+.controller {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 60px 30px 60px;
+  cursor: pointer;
+
+  @media screen and (max-width: 440px) {
+    padding: 0 20px 30px 20px;
+  }
+
+  p {
+    font-family: $banska;
+    font-weight: bold;
+    font-size: 18px;
+  }
+
+  .controllerPrev {
+    border: none;
+
+    display: flex;
+    align-items: center;
+
+    p {
+      margin-left: 10px;
+
+      @media screen and (max-width: 440px) {
+        margin-left: 5px;
+      }
+    }
+  }
+
+  .controllerNext {
+    display: flex;
+    align-items: center;
+    border: none;
+
+    p {
+      margin-right: 10px;
+
+      @media screen and (max-width: 440px) {
+        margin-right: 5px;
+      }
+    }
+  }
+}

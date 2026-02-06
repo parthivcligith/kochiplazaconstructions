@@ -1,0 +1,83 @@
+.sliderContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 15vh;
+}
+
+.currentImageSlider {
+  width: 20vw;
+  height: 40vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+
+  @media screen and (max-width: 1000px) {
+    width: 60vw;
+  }
+}
+
+.currentImageContainer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+  &.current {
+    object-fit: cover;
+  }
+
+  &.next {
+    object-fit: cover;
+  }
+
+  &.prev {
+    object-fit: cover;
+  }
+
+  .currentImage {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.infos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .genre {
+    font-size: 72px;
+    margin-top: 28px;
+    margin-bottom: 4px;
+
+    @media screen and (max-width: 440px) {
+      font-size: 42px;
+    }
+  }
+
+  .title {
+    margin-bottom: 12px;
+    font-size: 26px;
+    font-weight: 600;
+
+    @media screen and (max-width: 440px) {
+      font-size: 22px;
+    }
+  }
+
+  .description {
+    font-size: 18px;
+    text-align: center;
+    width: 70%;
+
+    @media screen and (max-width: 440px) {
+      font-size: 16px;
+    }
+  }
+}
