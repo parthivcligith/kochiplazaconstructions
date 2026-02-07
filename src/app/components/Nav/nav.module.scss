@@ -10,7 +10,7 @@
   width: auto;
   max-width: 85vw;
   min-width: 700px;
-  z-index: 12;
+  z-index: 100;
 
   // Island effect with rounded edges and glassmorphism
   background: rgba(255, 255, 255, 0.08);
@@ -93,7 +93,7 @@
   top: 45px;
   right: 60px;
   color: white;
-  z-index: 13;
+  z-index: 151;
 
   &:hover {
     cursor: pointer;
@@ -103,9 +103,10 @@
 // Responsive design
 @media (max-width: 900px) {
   .islandNav {
-    min-width: auto;
-    width: 88vw;
-    padding: 15px 30px;
+    min-width: 0; // Ensure it can shrink
+    width: 90%; // Use % instead of vw to avoid scrollbar issues
+    max-width: 100%; // strict max-width
+    padding: 15px 20px;
 
     .menuOpener {
       font-size: 16px;
@@ -123,9 +124,10 @@
 
 @media (max-width: 600px) {
   .islandNav {
-    padding: 12px 20px;
+    padding: 12px 15px; // Reduced side padding
+    width: 92%; // Slightly wider on small mobile
     top: 15px;
-    justify-content: space-between; // Changed from center to space-between
+    justify-content: space-between;
 
     .menuOpener {
       display: none;

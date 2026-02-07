@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import gsap from "gsap";
 import styles from "./content.module.scss";
 import { motion } from "framer-motion";
+import ThreeDObject from "./ThreeDObject";
 
 export default function NextImageSlider({
   content,
@@ -50,14 +51,14 @@ export default function NextImageSlider({
     }
 
     tlNext
-      .set(`.${styles.next}`, { opacity: 1, x: 0 })
+      .set(`.${styles.next}`, { autoAlpha: 1, x: 0 })
       .to(`.${styles.next}`, { x: "100%", scale: 1 }, 0)
-      .set(`.${styles.next}`, { opacity: 0 }, 1);
+      .set(`.${styles.next}`, { autoAlpha: 0 }, 1);
 
     tlPrev
-      .set(`.${styles.prev}`, { opacity: 1, x: 0 })
+      .set(`.${styles.prev}`, { autoAlpha: 1, x: 0 })
       .to(`.${styles.prev}`, { x: "-110%", scale: 1.2 }, 0)
-      .set(`.${styles.prev}`, { opacity: 0 }, 1);
+      .set(`.${styles.prev}`, { autoAlpha: 0 }, 1);
 
     tlCurrent
       .set(`.${styles.current}`, { opacity: 1, zIndex: 2, scale: 1.2 })
@@ -86,7 +87,7 @@ export default function NextImageSlider({
 
   return (
     <div className={styles.sliderContainer}>
-      <div className={styles.currentImageSlider}>
+      <div className={`${styles.currentImageSlider} ${content[newCurrentIndex].src.includes("creation_2344042398.png") ? styles.overflowVisible : ''}`}>
         {content.map((item, index) => {
           const isCurrent = index === newCurrentIndex;
           const isNext = index === (newCurrentIndex + 1) % content.length;
@@ -105,12 +106,19 @@ export default function NextImageSlider({
                     : ""
                 }`}
             >
-              <img
-                src={item.src}
-                alt={`${item.title} - ${item.genre} by KochiPlaza Constructions in Kochi, Kerala`}
-                className={styles.currentImage}
-                title={`${item.title} - Best Construction Company in Kerala`}
-              />
+              {item.src.includes("creation_2344042398.png") ? (
+                <ThreeDObject
+                  src={item.src}
+                  alt={`${item.title} - ${item.genre} by KochiPlaza Constructions in Kochi, Kerala`}
+                />
+              ) : (
+                <img
+                  src={item.src}
+                  alt={`${item.title} - ${item.genre} by KochiPlaza Constructions in Kochi, Kerala`}
+                  className={styles.currentImage}
+                  title={`${item.title} - Best Construction Company in Kerala`}
+                />
+              )}
             </div>
           );
         })}

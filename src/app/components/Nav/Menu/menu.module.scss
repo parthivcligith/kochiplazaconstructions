@@ -1,10 +1,10 @@
 .menu {
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   // transform: translateX(0); // Handled by framer-motion
   background-color: black;
   position: fixed;
-  z-index: 10;
+  z-index: 90;
   top: 0;
   left: 0; // Fix to left
   display: flex;
@@ -13,7 +13,7 @@
   .genres {
     display: flex;
     width: 100%; // Fill parent
-    max-width: 100vw;
+    max-width: 100%;
     height: 85%;
     flex-direction: column;
     justify-content: space-between;

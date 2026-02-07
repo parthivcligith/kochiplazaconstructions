@@ -16,8 +16,12 @@
   position: relative;
 
   @media screen and (max-width: 1000px) {
-    width: 60vw;
-    height: 40vh; // Keep mobile height unchanged
+    width: 60vw; // Increased from 35vw to 60vw to make it bigger on mobile (1.8x scale = 108vw? No, 1.5x)
+    height: 40vh;
+  }
+
+  &.overflowVisible {
+    overflow: visible !important;
   }
 }
 
