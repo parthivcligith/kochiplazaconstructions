@@ -8,25 +8,26 @@ export default function ThreeDObject({ src, alt }) {
     const containerRef = useRef(null);
 
     // 1. Scroll Detection Setup
+    // 1. Scroll Detection Setup
     const { scrollYProgress } = useScroll({
         target: containerRef,
-        offset: ["start start", "end -100vh"], // Track until hero is well off-screen (extensions allow slower return)
+        offset: ["start start", "end -300vh"], // Massive runway for very slow return
     });
 
-    // Smooth spring physics for scroll - "Floaty Smooth" tuning
+    // Smooth spring physics for scroll - "Heavy/Slow" tuning for mobile feel
     const smoothProgress = useSpring(scrollYProgress, {
-        mass: 0.2,
-        stiffness: 120, // Softer spring for gentler response
-        damping: 30,
+        mass: 0.4,      // Heavy object (high inertia)
+        stiffness: 60,  // Very soft spring (slow response)
+        damping: 20,    // Damped
         restDelta: 0.001,
     });
 
     // 2. Scroll-to-Y Position Mapping & Parallax
     // Choreography: 
-    // 0 -> 0.3: Delayed start
-    // 0.3 -> 0.4: Quick reach to max depth
-    // 0.4 -> 1.0: Ultra-long smooth return (60% of duration)
-    const toothY = useTransform(smoothProgress, [0, 0.3, 0.4, 1], [0, 100, 1500, 0]);
+    // 0 -> 0.1: Start
+    // 0.1 -> 0.4: "Move a lot" (Deep descent 1800px)
+    // 0.4 -> 1.0: "Way back very slower" (60% duration vs 30% descent)
+    const toothY = useTransform(smoothProgress, [0, 0.1, 0.4, 1], [0, 100, 1800, 0]);
     // Scale growth during descent
     const toothScaleScroll = useTransform(smoothProgress, [0, 1], [1, 1.2]);
 

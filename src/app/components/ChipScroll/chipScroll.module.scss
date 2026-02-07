@@ -45,8 +45,8 @@
         flex: none;
         padding: 30px 20px 40px 20px;
         border: none;
-        /* More subtle gradient so we can see the house through it */
-        background: linear-gradient(to top, #050505 10%, rgba(5, 5, 5, 0.8) 50%, rgba(5, 5, 5, 0) 100%);
+        /* Removed gradient as requested */
+        background: none;
         justify-content: flex-end;
         pointer-events: none;
     }
