@@ -1,3 +1,5 @@
+"use client";
+
 import { useEffect, useRef } from "react";
 import styles from "./footer.module.scss";
 import { motion, useScroll, useTransform } from "framer-motion";

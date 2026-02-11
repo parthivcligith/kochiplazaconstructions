@@ -1,0 +1,123 @@
+@import "../../variables.scss";
+
+.heroContainer {
+    display: flex;
+    overflow-x: clip;
+    overflow-y: visible;
+    position: relative;
+    z-index: 50;
+    height: 100vh;
+    width: 100%;
+}
+
+.contentWrapper {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.textContent {
+    height: 100vh;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 60px;
+    position: relative;
+    z-index: 10;
+
+    @media screen and (max-width: 1000px) {
+        width: 100%;
+        background: rgba(255, 255, 255, 0.4); // Semi-transparent background
+        backdrop-filter: blur(5px); // Optional: adds blur for better readability
+    }
+
+    .genre {
+        font-size: 72px;
+        margin-bottom: 4px;
+        text-align: center;
+        line-height: 1.1;
+
+        @media screen and (max-width: 440px) {
+            font-size: 42px;
+        }
+    }
+
+    .title {
+        margin-bottom: 12px;
+        font-size: 26px;
+        font-weight: 600;
+        text-align: center;
+        color: #666;
+
+        @media screen and (max-width: 440px) {
+            font-size: 22px;
+        }
+    }
+
+    .subtitle {
+        font-size: 18px;
+        text-align: center;
+        width: 80%;
+        margin-bottom: 30px;
+        color: #333;
+
+        @media screen and (max-width: 440px) {
+            font-size: 16px;
+        }
+    }
+
+    .buttonGroup {
+        display: flex;
+        gap: 20px;
+        margin-top: 20px;
+
+        button {
+            padding: 12px 24px;
+            background-color: transparent;
+            border: 1px solid #333;
+            border-radius: 30px;
+            cursor: pointer;
+            font-family: inherit;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+
+            &:hover {
+                background-color: #333;
+                color: white;
+            }
+        }
+    }
+}
+
+.visualContent {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    @media screen and (max-width: 1000px) {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 5; // Behind text (z-index 10)
+        transform: scale(0.6); // Make image smaller on mobile
+    }
+}
+
+// Reuse transparent container style
+.imageContainer {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}

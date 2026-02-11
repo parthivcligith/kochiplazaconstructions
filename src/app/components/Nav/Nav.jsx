@@ -1,4 +1,7 @@
+"use client";
+
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import styles from "./nav.module.scss";
 import Menu from "./Menu/Menu";
 import { AnimatePresence, motion } from "framer-motion";
@@ -40,9 +43,9 @@ export default function Nav() {
           <span></span>
         </div>
 
-        <div className={styles.logo}>
+        <Link href="/" className={styles.logo}>
           <img src="/assets/images/logo.png" alt="KochiPlaza Logo" className={styles.logoImage} />
-        </div>
+        </Link>
 
         <h4 className={styles.contactLink} onClick={scrollToFooter}>
           <TextHover text="( Contact )" />

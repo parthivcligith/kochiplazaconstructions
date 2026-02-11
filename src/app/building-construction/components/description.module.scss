@@ -1,0 +1,120 @@
+@import "../../variables.scss";
+
+.descriptionContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 0 60px;
+    margin-top: 30vh;
+    height: 650vh; // Keep deep scroll height for parallax effect
+
+    @media screen and (max-width: 640px) {
+        padding: 0 30px;
+    }
+
+    h1 {
+        margin-bottom: 80px;
+        font-size: 54px;
+        text-align: center;
+        font-weight: 800;
+        width: 100%;
+
+        @media screen and (max-width: 640px) {
+            font-size: 36px;
+            margin-bottom: 50px;
+        }
+    }
+
+    p {
+        font-size: 36px;
+
+        @media screen and (max-width: 640px) {
+            font-size: 18px;
+        }
+    }
+}
+
+.description {
+    position: sticky;
+    top: 30vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.descriptionText {
+    margin: 0 auto;
+    width: 90%;
+    text-align: center;
+}
+
+.descriptionText span {
+    opacity: 0.3;
+    font-weight: 600;
+}
+
+.illustrations {
+    .images {
+        display: flex;
+        margin-top: 320vh;
+        justify-content: space-between;
+        max-width: 100%;
+        width: 100%;
+        position: relative;
+
+        .imageContainer {
+            width: 26%;
+            height: 30%;
+
+            @media screen and (max-width: 1040px) {
+                width: 46%;
+                height: 50%;
+            }
+
+            @media screen and (max-width: 740px) {
+                width: 70vw;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            img {
+                object-fit: cover;
+                height: 100%;
+                width: 100%;
+            }
+
+            // Parallax layout for images
+            &:nth-child(1) {
+                margin-top: 20em;
+            }
+
+            &:nth-child(2) {
+                margin-top: 70em;
+                z-index: 2;
+            }
+
+            &:nth-child(3) {
+                margin-top: -75em;
+            }
+        }
+    }
+}
+
+.circleContainer {
+    position: relative;
+    margin-top: 200px;
+    height: 0px;
+
+    .circle {
+        box-shadow: 0px 60px 50px rgba(0, 0, 0, 0.748);
+        position: absolute;
+        height: 1550%;
+        width: 120%;
+        left: -10%;
+        background-color: $background;
+        border-radius: 0% 0% 50% 50%;
+        z-index: 1;
+    }
+
+    overflow: hidden;
+}

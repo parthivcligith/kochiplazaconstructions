@@ -6,7 +6,7 @@ import Link from "next/link";
 import Modal from "../Modal/Modal";
 import { useState } from "react";
 
-export default function Menu({}) {
+export default function Menu({ }) {
   // console.log(content.map((item) => item.genre));
   const [modal, setModal] = useState({ active: false, index: 0 });
   return (
@@ -38,7 +38,25 @@ export default function Menu({}) {
                 }}
               >
                 <p>( {index + 1} )</p>
-                <h2>{item.genre}</h2>
+                {item.genre === "House Construction" ? (
+                  <Link href="/house-construction" style={{ textDecoration: 'none', color: 'inherit' }}>
+                    <h2>{item.genre}</h2>
+                  </Link>
+                ) : item.genre === "Building Construction" ? (
+                  <Link href="/building-construction" style={{ textDecoration: 'none', color: 'inherit' }}>
+                    <h2>{item.genre}</h2>
+                  </Link>
+                ) : item.genre === "Remodeling & Renovation" ? (
+                  <Link href="/remodeling-renovation" style={{ textDecoration: 'none', color: 'inherit' }}>
+                    <h2>{item.genre}</h2>
+                  </Link>
+                ) : item.genre === "Pool Constructions" ? (
+                  <Link href="/pool-construction" style={{ textDecoration: 'none', color: 'inherit' }}>
+                    <h2>{item.genre}</h2>
+                  </Link>
+                ) : (
+                  <h2>{item.genre}</h2>
+                )}
                 {/* <Link href="#footer">Link to scroll</Link> */}
               </motion.div>
 

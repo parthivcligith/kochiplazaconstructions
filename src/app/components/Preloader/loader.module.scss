@@ -34,7 +34,7 @@
   .imageContainer {
     height: 100%;
     width: 100%;
-    display: flex;
+    display: none; // Hidden by default on desktop
     position: absolute;
     justify-content: space-between;
     width: 80%;
@@ -43,7 +43,7 @@
     margin: 0 auto;
 
     @media screen and (max-width: 1240px) {
-      display: none;
+      display: flex; // Show on mobile/tablet
     }
 
     .image {

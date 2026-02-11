@@ -2,14 +2,15 @@
 
 
 .modalContainer {
-  height: 300px;
-  width: 450px;
+  height: 250px;
+  width: 250px;
   display: flex;
   align-items: center;
   justify-content: center;
   position: absolute;
   overflow: hidden;
   pointer-events: none;
+  border-radius: 50%; // Make it circular
 }
 
 .modalSlider {
@@ -27,10 +28,12 @@
   justify-content: center;
   background-color: $background;
 }
+
 .modal img {
-  height: 70%;
-  width: 80%;
+  height: 100%;
+  width: 100%;
   object-fit: cover;
+  border-radius: 50%; // Make image circular
 }
 
 .cursor,
@@ -46,6 +49,7 @@
   justify-content: center;
   color: $clearText;
 }
+
 .cursorLabel {
   background-color: transparent;
   font-size: 28px;
