@@ -26,7 +26,7 @@ export const metadata = {
         images: ["/public/house/hero-1.png"],
     },
     alternates: {
-        canonical: "https://kochiplazaconstructions.com/house-construction",
+        canonical: "https://kochiplaza.in/house-construction",
     },
 };
 
@@ -38,8 +38,8 @@ const jsonLd = {
     "provider": {
         "@type": "ConstructionCompany",
         "name": "KochiPlaza Constructions",
-        "url": "https://kochiplazaconstructions.com",
-        "logo": "https://kochiplazaconstructions.com/assets/images/logo.png",
+        "url": "https://kochiplaza.in",
+        "logo": "https://kochiplaza.in/assets/images/logo.png",
         "address": {
             "@type": "PostalAddress",
             "addressLocality": "Kochi",

@@ -5,7 +5,7 @@
  */
 
 export default function sitemap() {
-    const baseUrl = 'https://kochiplazaconstructions.com';
+    const baseUrl = 'https://kochiplaza.in';
     const currentDate = new Date();
 
     return [

@@ -24,7 +24,7 @@ export const metadata = {
         description: "Expert pool construction services by KochiPlaza Constructions.",
     },
     alternates: {
-        canonical: "https://kochiplazaconstructions.com/pool-construction",
+        canonical: "https://kochiplaza.in/pool-construction",
     },
 };
 
@@ -36,8 +36,8 @@ const jsonLd = {
     "provider": {
         "@type": "ConstructionCompany",
         "name": "KochiPlaza Constructions",
-        "url": "https://kochiplazaconstructions.com",
-        "logo": "https://kochiplazaconstructions.com/assets/images/logo.png",
+        "url": "https://kochiplaza.in",
+        "logo": "https://kochiplaza.in/assets/images/logo.png",
         "address": {
             "@type": "PostalAddress",
             "addressLocality": "Kochi",

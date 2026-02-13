@@ -5,7 +5,7 @@
  */
 
 export default function robots() {
-    const baseUrl = 'https://kochiplazaconstructions.com';
+    const baseUrl = 'https://kochiplaza.in';
 
     return {
         rules: [

@@ -15,7 +15,7 @@ export const metadata = {
     title: "KochiPlaza Constructions | Best Construction Company in Kochi, Kerala",
     description: "Trusted construction company in Kochi offering residential, commercial & turnkey construction across all Kerala districts.",
     type: "website",
-    url: "https://kochiplazaconstructions.com",
+    url: "https://kochiplaza.in",
     locale: "en_IN",
   },
   other: {
@@ -37,7 +37,7 @@ export default function RootLayout({ children }) {
     "@context": "https://schema.org",
     "@type": ["ConstructionCompany", "LocalBusiness"],
     "name": "KochiPlaza Constructions",
-    "image": "https://kochiplazaconstructions.com/logo.png",
+    "image": "https://kochiplaza.in/logo.png",
     "telephone": "+91-98951-69005",
     "priceRange": "$$",
     "description": "KochiPlaza Constructions is a premier construction company based in Kochi and Ernakulam, dedicated to delivering world-class residential and commercial building solutions across all 14 districts of Kerala. Our expertise encompasses a wide range of services including luxury villa construction, budget-friendly home building, commercial complex development, office spaces, turnkey project execution, and meticulous renovation services. We are renowned for our superior craftsmanship, clear communication, and timely project delivery. Whether you are looking to build your dream home in Thiruvananthapuram, a vacation villa in Wayanad, a commercial hub in Kozhikode, or perform a complete home makeover in Thrissur, KochiPlaza Constructions is your trusted partner. Our team of experienced architects, civil engineers, and interior designers work collaboratively to bring your vision to life, ensuring every detail meets the highest standards of quality and aesthetics. We optimize for sustainable and eco-friendly construction practices, offering green building solutions that stand the test of time. From initial soil testing and architectural planning to structural engineering, interior finishing, and final handover, we manage the entire construction lifecycle with professionalism and transparency. Contact us today for the best construction services in Aluva, Kakkanad, Edappally, Vyttila, and beyond.",
@@ -71,7 +71,7 @@ export default function RootLayout({ children }) {
         "longitude": "76.3105"
       }
     ],
-    "url": "https://kochiplazaconstructions.com",
+    "url": "https://kochiplaza.in",
     "openingHoursSpecification": [
       {
         "@type": "OpeningHoursSpecification",
